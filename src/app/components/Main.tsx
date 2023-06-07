@@ -1,22 +1,14 @@
 import { useEffect, useRef } from 'react';
-import BubbleScene from '../three/BubbleScene';
+import { createBubbleScene } from '../three/BubbleScene';
 
 const Main = () => {
     const containerRef = useRef<HTMLDivElement | null>(null);
-    const bubbleSceneRef = useRef<BubbleScene | null>(null);
 
     useEffect(() => {
-        if (!containerRef.current) return;
-
-        bubbleSceneRef.current = new BubbleScene(containerRef.current);
-        bubbleSceneRef.current.animate();
-
-        return () => {
-            if (bubbleSceneRef.current) {
-                bubbleSceneRef.current = null;
-            }
-        };
-    }, []);
+        if (containerRef.current) {
+            createBubbleScene(containerRef.current);
+        }
+    }, []); // empty dependency array ensures this runs once after initial render
 
     return (
         <div id='home' className='w-full h-screen text-center relative overflow-hidden'>
