@@ -31,8 +31,12 @@ const FresnelShader = {
 
         "uniform float amplitude;",
         "attribute vec3 vel;",
+
+        "attribute float lifespan;",
+        "varying float vLifespan;",
 			
 		"void main() {",
+            "vLifespan = lifespan;",
 
 			"vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );",
 			"vec4 worldPosition	= modelMatrix*1.3 * vec4( position, 1.0 );",
@@ -47,11 +51,10 @@ const FresnelShader = {
 			"vRefract[2]	= refract( normalize( I ), worldNormal, mRefractionRatio * 0.988 );",
 			"vReflectionFactor = mFresnelBias + mFresnelScale * pow( 1.0 + dot( normalize( I ), worldNormal ), mFresnelPower);",
 			
-            "vec3 newPosition = position + worldNormal * vel * amplitude;",
-
-
-			"gl_Position	= projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0 );",
-
+            "if (!(lifespan <= 0.0)) {",
+                "vec3 newPosition = position + worldNormal * vel * amplitude;",
+                "gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0 );",
+            "}",
 		"}"
 
 	].join("\n"),
@@ -65,17 +68,22 @@ const FresnelShader = {
 		"varying vec3 vRefract[3];",
 		"varying float vReflectionFactor;",
 
+        "varying float vLifespan;"
+,
 		"void main() {",
+            "if (vLifespan <= 0.0) {",
+                "discard;",
+            "} else {",
+                "vec4 reflectedColor = textureCube( tCube, vec3( -vReflect.x, -vReflect.yz ) );",
+                "vec4 refractedColor = vec4( 0.97 );",
 
-			"vec4 reflectedColor = textureCube( tCube, vec3( -vReflect.x, -vReflect.yz ) );",
-			"vec4 refractedColor = vec4( 0.97 );",
+                "refractedColor.r = textureCube( tCube, vec3( vRefract[0].x, vRefract[0].yz ) ).r;",
+                "refractedColor.g = textureCube( tCube, vec3( vRefract[1].x, vRefract[1].yz ) ).g;",
+                "refractedColor.b = textureCube( tCube, vec3( vRefract[2].x, vRefract[2].yz ) ).b;",
 
-			"refractedColor.r = textureCube( tCube, vec3( vRefract[0].x, vRefract[0].yz ) ).r;",
-			"refractedColor.g = textureCube( tCube, vec3( vRefract[1].x, vRefract[1].yz ) ).g;",
-			"refractedColor.b = textureCube( tCube, vec3( vRefract[2].x, vRefract[2].yz ) ).b;",
-
-			"gl_FragColor = mix( refractedColor*0.94, reflectedColor, clamp( vReflectionFactor, 0.5, 0.15 ) );",
-            "gl_FragColor *= opacity;",
+                "gl_FragColor = mix( refractedColor*0.94, reflectedColor, clamp( vReflectionFactor, 0.5, 0.15 ) );",
+                "gl_FragColor *= opacity;",
+            "}",
 		"}"
 
 	].join("\n")
