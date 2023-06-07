@@ -12,7 +12,10 @@ const FresnelShader = {
 		mFresnelBias		: { type: "f", value: 0.9   },
 		mFresnelPower		: { type: "f", value: 2.0   },
 		mFresnelScale		: { type: "f", value: 1.0   },
-		tCube			: { type: "t", value: null  }
+		tCube           : { type: "t", value: null  },
+        amplitude           : { type: "f", value: 0.0 },
+        explode         : { type: "f", value: 0.0 },
+        opacity             : { type: "f", value: 1.0 },
 	},
 
 	vertexShader: [
@@ -25,10 +28,13 @@ const FresnelShader = {
 		"varying vec3  vReflect;",
 		"varying vec3  vRefract[3];",
 		"varying float vReflectionFactor;",
+
+        "uniform float amplitude;",
+        "attribute vec3 vel;",
 			
 		"void main() {",
 
-			"vec4 mvPosition	= modelViewMatrix * vec4( position, 1.0 );",
+			"vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );",
 			"vec4 worldPosition	= modelMatrix*1.3 * vec4( position, 1.0 );",
 
 			"vec3 worldNormal	= normalize( mat3( modelMatrix[0].xyz, modelMatrix[1].xyz, modelMatrix[2].xyz ) * normal );",
@@ -41,13 +47,17 @@ const FresnelShader = {
 			"vRefract[2]	= refract( normalize( I ), worldNormal, mRefractionRatio * 0.988 );",
 			"vReflectionFactor = mFresnelBias + mFresnelScale * pow( 1.0 + dot( normalize( I ), worldNormal ), mFresnelPower);",
 			
-			"gl_Position	= projectionMatrix * mvPosition;",
+            "vec3 newPosition = position + worldNormal * vel * amplitude;",
+
+
+			"gl_Position	= projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0 );",
 
 		"}"
 
 	].join("\n"),
 
 	fragmentShader: [
+        "uniform float opacity;",
 
 		"uniform samplerCube tCube;",
 
@@ -64,9 +74,8 @@ const FresnelShader = {
 			"refractedColor.g = textureCube( tCube, vec3( vRefract[1].x, vRefract[1].yz ) ).g;",
 			"refractedColor.b = textureCube( tCube, vec3( vRefract[2].x, vRefract[2].yz ) ).b;",
 
-			//"gl_FragColor = mix( refractedColor, reflectedColor, clamp( vReflectionFactor, 0.5, 0.1 ) );",
 			"gl_FragColor = mix( refractedColor*0.94, reflectedColor, clamp( vReflectionFactor, 0.5, 0.15 ) );",
-
+            "gl_FragColor *= opacity;",
 		"}"
 
 	].join("\n")
