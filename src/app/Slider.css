@@ -1,0 +1,31 @@
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  overflow: hidden;
+  width: 100%; 
+}
+
+.item {
+  flex: 0 0 33%;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0.6;
+}
+
+.item.active {
+  opacity: 1;
+}
+
+.card-header {
+  @apply font-bold pt-4 text-center
+}
+.card-td {
+  @apply text-sm text-center
+}
+.card-description {
+  @apply text-xs text-center
+}

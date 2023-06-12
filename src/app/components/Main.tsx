@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { createBubbleScene } from '../three/BubbleScene';
+import { createBubbleScene } from '../three/create_bubble_scene';
 
 const Main = () => {
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -12,10 +12,10 @@ const Main = () => {
 
     return (
         <div id='home' className='w-full h-screen text-center relative overflow-hidden'>
-            <div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center absolute z-10'>
-                <div>
-                    <p></p>
-                    <h1 className='py-4 text-gray-700'></h1>
+            <div className='w-full h-full text-white mx-auto p-2 flex justify-center items-center absolute z-10'>
+                <div className='w-full'>
+                    <h1 className='py-4'>Xander Carruth</h1>
+                    <h3 className='px-4 md:px-1/5'>I am a software developer working to provide a better education experience by creating <span className='text-[#163898]'>Natural Language Processing</span>, <span className='text-[#163898]'>Full Stack</span>, and <span className='text-[#163898]'>Virtual Reality</span> solutions.</h3>
                 </div>
             </div>
             <div ref={containerRef} className='w-full h-full absolute z-0'></div>

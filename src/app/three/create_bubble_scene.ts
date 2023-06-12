@@ -72,7 +72,7 @@ export function createBubbleScene(container: HTMLDivElement) {
     }   );
     
     // SPHERE
-    const sphereRadius = 35;
+    const sphereRadius = 30;
     var sphereGeometry = new THREE.SphereGeometry( sphereRadius, 64, 32 );
     // tessellate modifier here
     const tessellateModifier = new TessellateModifier(2, 1);
