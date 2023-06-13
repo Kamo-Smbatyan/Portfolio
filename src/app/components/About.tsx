@@ -94,7 +94,7 @@ const About = () => {
     <div id='about' className='w-full p-2 flex py-16'>
         <div className='w-full text-center gap-8'>
               <h2 className='py-4 tracking-widest'>About Me</h2>
-              <div className='grid md:grid-cols-2 gap-4 pt-16'>
+              <div className='grid md:grid-cols-2 gap-4 pt-8'>
                 <div className='p-6'>
                   <div className='inline-block pb-4'>
                     <h3 className='relative pb-1'>Education</h3>

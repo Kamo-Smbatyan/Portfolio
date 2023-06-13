@@ -25,7 +25,7 @@ function Projects() {
         ],
         image: SalonnIosProject,
         description: 'Salonn iOS is an app which allows users to explore their interests in Art, Technology, and Philosophy.',
-        link: '#/about'
+        link: 'https://www.salonn.info/'
     };
     const salonnVrCard = {
         title: 'Salonn VR',
@@ -34,7 +34,7 @@ function Projects() {
         ],
         image: SalonnVrProject,
         description: 'Salonn VR is a VR app which interfaces with Salonn iOS to allow users to experience physical presence with other users in a VR environment.',
-        link: '#/about'
+        link: 'https://www.salonn.info/'
     };
     const oliCard = {
         title: 'Open Learning Initiative Student Development Analysis',
@@ -43,7 +43,7 @@ function Projects() {
         ],
         image: OliProject,
         description: 'In this project, I analyzed data from the OLI textbook to identify important trends for further development of our adaptive textbook.',
-        link: '#/about'
+        link: 'https://github.com/xander-carruth/OLI-Data-Analysis'
     };
     const socialCard = {
         title: 'Facebook User-Connection Probability Detection Based On Social Circles',
@@ -52,7 +52,7 @@ function Projects() {
         ],
         image: SocialProject,
         description: 'In this project, I created a novel method of predicting connections between users in the Facebook social network by using the Dunbar model of a social network.',
-        link: '#/about'
+        link: '/assets/downloads/CSC522_Final_Report.pdf'
     };
     const portfolioCard = {
         title: 'My Portfolio',
@@ -66,7 +66,7 @@ function Projects() {
         ],
         image: PortfolioProject,
         description: 'My website that you are looking at right now!',
-        link: '#/about'
+        link: '/'
     };
 
     const projectCards = [
@@ -81,32 +81,62 @@ function Projects() {
             <div className='text-center'>
                 <h2 className='tracking-widest'>Projects</h2>
             </div>
-            <div className='grid md:grid-cols-2 gap-x-16 gap-y-8 pt-10 px-16 mx-auto'>
-                {projectCards.map((card, index) => (
-                    <div key={index} className='p-4 border-2 border-gray-200 rounded-lg items-center relative overflow-hidden'>
-                        <div 
-                          className="absolute inset-0 z-10"
-                          style={{backgroundImage: `url(${ProjectBubble})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat'}}>
-                        </div>
-                        <h3 className='text-center mb-2'>{card.title}</h3>
-                        <div className='flex flex-wrap justify-center mx-10'>
-                            {card.skills.map((skill, skillIndex) => (
-                                <div key={skillIndex} className='m-1 px-2 py-1 border-2 border-salonnblue bg-salonnblue rounded-lg'>
-                                    {skill}
+            <div className='grid md:grid-cols-2 gap-x-16 gap-y-8 pt-10 px-8 md:px-16 mx-auto'>
+                {
+                projectCards.map((card, index) => (
+                    <div key={index}
+                        className='p-4 rounded-lg items-center relative overflow-hidden'>
+                        <div className="absolute inset-0 z-0"
+                            style={
+                                {
+                                    backgroundImage: `url(/assets/project_pics/project_bubble.png)`,
+                                    backgroundSize: '100% 100%',
+                                    backgroundRepeat: 'no-repeat'
+                                }
+                        }></div>
+                        <div className="relative z-10 py-4 md:py-16 px-6 md:px-2 lg:px-28">
+                            <p id='project-title' className='text-center mb-2'>
+                                {
+                                card.title
+                            }</p>
+                            <div className='flex flex-wrap justify-center'>
+                                {
+                                card.skills.map((skill, skillIndex) => (
+                                    <div key={skillIndex}
+                                        className='m-1 px-2 py-1 text-xxs md:text-sm bg-salonnblue rounded-lg'>
+                                        {skill} </div>
+                                ))
+                            } </div>
+                            <div className='py-2 md:py-4'>
+                                <div className='h-40 md:h-60 relative'>
+                                    <Image src={card.image}
+                                            alt={card.title}
+                                            fill
+                                            className="object-contain absolute"
+                                    /> 
                                 </div>
-                            ))}
+                            </div>
+
+                            {/* <Image className='mx-auto my-4' src={card.image} alt={card.title} height={300} layout='responsive'/> */}
+                            <p className='text-xs md:text-base'>
+                                {card.description}
+                                &nbsp;<a href={card.link} target="_blank" rel="noopener noreferrer" className='underline text-salonnblue'>Learn more...</a>
+                            </p>
                         </div>
-                        <Image className='mx-auto my-4' src={card.image} alt={card.title} layout="fill" objectFit="cover"/>
-                        <p className='mx-10'>{card.description} <Link className='underline text-salonnblue' href={card.link}>Learn more...</Link></p>
                     </div>
-                ))}
-            </div>
+                ))
+            } </div>
         </div>
-      )
+    )
     }
+    
+    
+    
+    
+    
     
 
 
-}
+
 
 export default Projects
