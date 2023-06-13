@@ -21,6 +21,9 @@ module.exports = {
       },
       colors: {
         'salonnblue': '#163898',
+      },
+      fontSize: {
+        'xxs': '0.5rem',
       }
     },
   },

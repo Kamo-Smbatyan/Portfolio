@@ -36,5 +36,9 @@ html {
   button {
     @apply rounded-xl uppercase bg-blue-50 text-white
   }
+
+  #project-title {
+    @apply text-base md:text-3xl
+  }
   
 }

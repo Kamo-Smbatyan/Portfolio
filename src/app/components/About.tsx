@@ -6,7 +6,6 @@ import SalonnLogo from '../../../public/assets/logos/salonn_logo.png';
 import BiomojoLogo from '../../../public/assets/logos/biomojo_logo.png';
 import CeiLogo from '../../../public/assets/logos/cei_logo.png';
 import MxrLogo from '../../../public/assets/logos/mxr_logo.png';
-import '../Cards.css'
 
 const About = () => {
   const educationCards = [
@@ -92,7 +91,7 @@ const About = () => {
   };
 
   return (
-    <div id='about' className='w-full md:h-screen p-2 flex py-16'>
+    <div id='about' className='w-full p-2 flex py-16'>
         <div className='w-full text-center gap-8'>
               <h2 className='py-4 tracking-widest'>About Me</h2>
               <div className='grid md:grid-cols-2 gap-4 pt-16'>
@@ -106,10 +105,11 @@ const About = () => {
                   {educationCards.map((card, index) => (
                     <div 
                     key={index}
-                    className={`flex items-start space-y-4 w-full md:w-4/5 mx-auto p-4 transition-all duration-200 ease-in-out border-2 rounded-lg cursor-pointer
+                    className={`w-full md:w-4/5 mx-auto p-4 transition-all duration-200 ease-in-out border-2 rounded-lg cursor-pointer
                       ${selectedEdCard === index ? 'border-salonnblue' : 'border-transparent'}
                       ${selectedEdCard === index ? 'bg-transparent border-salonnblue' : 'bg-transparent border-transparent hover:bg-gray-100 hover:border-salonnblue'}`}
                     onClick={() => handleEdClick(index)}>
+                      <div className='flex items-start space-y-4'>
                         <div className='w-1/4 flex justify-center'>
                           <Image className='relative h-auto w-auto my-4' src={card.image} alt={card.experienceName} width={50} />
                         </div>
@@ -117,12 +117,14 @@ const About = () => {
                           <p className='text-sm md:text-lg font-bold'>{card.experienceName}</p>
                           <p className='text-xs md:text-base'>{card.type}</p>
                           <p className='text-xs md:text-base'>{card.dates}</p>
-                          <div className={`w-full tracking-normal transition-all duration-500 ease-in-out overflow-hidden ${selectedEdCard === index ? 'max-h-screen' : 'max-h-0'}`}>
-                            <p className='text-xs md:text-base'>{card.description}</p>
-                          </div>
                         </div>
+                      </div>
+                      <div className={`w-full text-left pt-2 px-8 tracking-normal transition-all duration-500 ease-in-out overflow-hidden ${selectedEdCard === index ? 'max-h-screen' : 'max-h-0'}`}>
+                        <p className='text-xs md:text-base'>{card.description}</p>
+                      </div>
                     </div>
                   ))}
+
                 </div>
                 <div className='p-6'>
                 <div className='inline-block pb-4'>
@@ -134,10 +136,11 @@ const About = () => {
                   {workCards.map((card, index) => (
                     <div 
                     key={index}
-                    className={`flex items-start space-y-4 w-full md:w-4/5 mx-auto p-4 transition-all duration-200 ease-in-out border-2 rounded-lg cursor-pointer
+                    className={`w-full md:w-4/5 mx-auto p-4 transition-all duration-200 ease-in-out border-2 rounded-lg cursor-pointer
                       ${selectedWorkCard === index ? 'border-salonnblue' : 'border-transparent'}
                       ${selectedWorkCard === index ? 'bg-transparent border-salonnblue' : 'bg-transparent border-transparent hover:bg-gray-100 hover:border-salonnblue'}`}
                     onClick={() => handleWorkClick(index)}>
+                      <div className='flex items-start space-y-4'>
                         <div className='w-1/4 flex justify-center'>
                           <Image className='relative h-auto w-auto my-4' src={card.image} alt={card.experienceName} />
                         </div>
@@ -145,10 +148,11 @@ const About = () => {
                           <p className='text-sm md:text-lg font-bold'>{card.experienceName}</p>
                           <p className='text-xs md:text-base'>{card.type}</p>
                           <p className='text-xs md:text-base'>{card.dates}</p>
-                          <div className={`w-full tracking-normal transition-all duration-500 ease-in-out overflow-hidden ${selectedWorkCard === index ? 'max-h-screen' : 'max-h-0'}`}>
-                            <p className='text-xs md:text-base'>{card.description}</p>
-                          </div>
                         </div>
+                      </div>
+                      <div className={`w-full text-left pt-2 px-8 tracking-normal transition-all duration-500 ease-in-out overflow-hidden ${selectedWorkCard === index ? 'max-h-screen' : 'max-h-0'}`}>
+                        <p className='text-xs md:text-base'>{card.description}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
