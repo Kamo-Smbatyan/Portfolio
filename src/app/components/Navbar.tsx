@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Bubble from '../../../public/assets/Bubble.png';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
@@ -29,7 +30,10 @@ const Navbar = () => {
     return (
         <div className='bg-[#242424] bg-opacity-85 fixed w-full h-15 z-[100]'>
             <div className='flex justify-between items-center text-white w-full h-full px-2 2xl:px-16'>
-                <p>Xander Carruth</p>
+                <div className='flex items-center'>
+                    <Image src={Bubble} alt="Portfolio icon" className='mx-2 h-7 w-7'/>
+                    <p>Xander Carruth</p>
+                </div>
                 <div className='pr-4'>
                     <ul className='hidden md:flex'>
                         <Link href='/'>
