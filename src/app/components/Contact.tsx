@@ -16,9 +16,9 @@ const Contact = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-          // Check if the honeypot field is filled out
+      // Check if the honeypot field is filled out
       if (e.currentTarget.favoriteColor.value) {
-        setStatus("Failed to Send"); // Optional: set a custom error message
+        setStatus("Failed to Send");
         setTimeout(() => setStatus(''), 5000); // Remove status after 5 seconds
         return;
       }

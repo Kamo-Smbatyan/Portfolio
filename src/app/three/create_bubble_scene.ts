@@ -181,7 +181,6 @@ export function createBubbleScene(container: HTMLDivElement) {
         firstBubble.visible = false;
         secondBubble.visible = false;
 
-        // Update the sphere position
         if (firstBubble.position.y > sphereRadius && secondMoving == false)
             secondMoving = true;
         if (secondBubble.position.y > sphereRadius && firstMoving == false)
@@ -224,7 +223,6 @@ export function createBubbleScene(container: HTMLDivElement) {
             // set new position
             firstGeometry.attributes.position.setX(i, firstPosition_clone[ix] + firstNormals_clone[ix] * (xsin + ycos))
             firstGeometry.attributes.position.setY(i, firstPosition_clone[iy] + firstNormals_clone[iy] * (xsin + ycos))
-            // firstGeometry.attributes.position.setZ(i, firstPosition_clone[iz] + firstNormals_clone[iz] * (xsin + ycos))
         }
         firstGeometry.computeVertexNormals();
         firstGeometry.attributes.position.needsUpdate = true;
@@ -250,7 +248,6 @@ export function createBubbleScene(container: HTMLDivElement) {
             // set new position
             secondGeometry.attributes.position.setX(i, secondPosition_clone[ix] + secondNormals_clone[ix] * (xsin + ycos))
             secondGeometry.attributes.position.setY(i, secondPosition_clone[iy] + secondNormals_clone[iy] * (xsin + ycos))
-            // secondGeometry.attributes.position.setZ(i, secondPosition_clone[iz] + secondNormals_clone[iz] * (xsin + ycos))
         }
         secondGeometry.computeVertexNormals();
         secondGeometry.attributes.position.needsUpdate = true;

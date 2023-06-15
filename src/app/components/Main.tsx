@@ -9,7 +9,7 @@ const Main = () => {
         if (containerRef.current) {
             createBubbleScene(containerRef.current);
         }
-    }, []); // empty dependency array ensures this runs once after initial render
+    }, []);
 
     return (
         <div id='home' className='w-full h-screen text-center relative bg-[#ecf0f3] overflow-hidden'>
