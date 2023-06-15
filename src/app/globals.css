@@ -7,6 +7,7 @@ html {
   scroll-behavior: smooth!important;
 }
 
+
 @layer base {
 
   body {
@@ -40,5 +41,4 @@ html {
   #project-title {
     @apply text-base md:text-3xl
   }
-  
 }
