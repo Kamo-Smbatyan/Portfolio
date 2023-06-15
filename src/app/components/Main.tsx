@@ -11,7 +11,7 @@ const Main = () => {
     }, []); // empty dependency array ensures this runs once after initial render
 
     return (
-        <div id='home' className='w-full h-screen text-center relative overflow-hidden'>
+        <div id='home' className='w-full h-screen text-center relative bg-black overflow-hidden'>
             <div className='w-full h-full text-white mx-auto p-2 flex justify-center items-center absolute z-10'>
                 <div className='w-full'>
                     <h1 className='py-4'>Xander Carruth</h1>
