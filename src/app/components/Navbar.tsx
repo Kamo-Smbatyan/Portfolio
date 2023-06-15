@@ -23,11 +23,14 @@ const Navbar = () => {
         window.addEventListener('scroll', handleShadow);
     }, [])
 
+    const mto = "mailto:";
+    const em = "acarruth2018@gmail.com";
+
     return (
         <div className='bg-[#242424] bg-opacity-85 fixed w-full h-15 z-[100]'>
             <div className='flex justify-between items-center text-white w-full h-full px-2 2xl:px-16'>
                 <p>Xander Carruth</p>
-                <div>
+                <div className='pr-4'>
                     <ul className='hidden md:flex'>
                         <Link href='/'>
                             <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
@@ -59,29 +62,29 @@ const Navbar = () => {
                     <div className='py-4 text-white flex flex-col'>
                         <ul className='uppercase'>
                             <Link href='/'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>Home</li>
+                                <li onClick={() => setNav(false)} className='py-4 text-sm'><span className='hover:border-b'>Home</span></li>
                             </Link>
                             <Link href='/#about'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>About</li>
+                                <li onClick={() => setNav(false)} className='py-4 text-sm'><span className='hover:border-b'>About</span></li>
                             </Link>
                             <Link href='/#projects'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>Projects</li>
+                                <li onClick={() => setNav(false)} className='py-4 text-sm'><span className='hover:border-b'>Projects</span></li>
                             </Link>
                             <Link href='/#contact'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>Contact</li>
+                                <li onClick={() => setNav(false)} className='py-4 text-sm'><span className='hover:border-b'>Contact</span></li>
                             </Link>
                         </ul>
                         <div className='pt-40'>
                             <p className='uppercase tracking-widest'>Let's Connect</p>
                             <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                                <div className='rounded-full shadow-lg shadow-gray-800 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                    <FaLinkedinIn />
+                                <div className='rounded-full border-gray-800 border-2 shadow-lg shadow-gray-800 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                    <a href="https://www.linkedin.com/in/xander-carruth/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
                                 </div>
-                                <div className='rounded-full shadow-lg shadow-gray-800 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                    <FaGithub />
+                                <div className='rounded-full border-gray-800 border-2 shadow-lg shadow-gray-800 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                    <a href="https://github.com/xander-carruth/" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
                                 </div>
-                                <div className='rounded-full shadow-lg shadow-gray-800 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                                    <AiOutlineMail />
+                                <div className='rounded-full border-gray-800 border-2 shadow-lg shadow-gray-800 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                    <a href={`${mto}${em}`} target="_blank" rel="noopener noreferrer"><AiOutlineMail /></a>
                                 </div>
                             </div>
                         </div>

@@ -66,7 +66,7 @@ function Projects() {
         ],
         image: PortfolioProject,
         description: 'My website that you are looking at right now!',
-        link: '/'
+        link: 'https://github.com/xander-carruth/x-carruth-portfolio'
     };
 
     const projectCards = [
@@ -81,7 +81,7 @@ function Projects() {
             <div className='text-center'>
                 <h2 className='tracking-widest'>Projects</h2>
             </div>
-            <div className='grid md:grid-cols-2 gap-x-16 gap-y-8 pt-10 px-8 md:px-16 mx-auto'>
+            <div className='grid lg:grid-cols-2 gap-x-16 gap-y-8 pt-10 px-8 sm:px-16 md:px-32 lg:px-0 xl:px-16  mx-auto'>
                 {
                 projectCards.map((card, index) => (
                     <div key={index}
@@ -94,7 +94,7 @@ function Projects() {
                                     backgroundRepeat: 'no-repeat'
                                 }
                         }></div>
-                        <div className="relative z-10 py-4 md:py-16 px-6 md:px-2 lg:px-28">
+                        <div className="relative z-10 py-4 lg:pt-5 lg:pb-8 px-6 sm:px-14 md:px-16 lg:px-20">
                             <p id='project-title' className='text-center mb-2'>
                                 {
                                 card.title
@@ -108,7 +108,7 @@ function Projects() {
                                 ))
                             } </div>
                             <div className='py-2 md:py-4'>
-                                <div className='h-40 md:h-60 relative'>
+                                <div className='h-40 lg:h-60 relative'>
                                     <Image src={card.image}
                                             alt={card.title}
                                             fill
@@ -117,7 +117,6 @@ function Projects() {
                                 </div>
                             </div>
 
-                            {/* <Image className='mx-auto my-4' src={card.image} alt={card.title} height={300} layout='responsive'/> */}
                             <p className='text-xs md:text-base'>
                                 {card.description}
                                 &nbsp;<a href={card.link} target="_blank" rel="noopener noreferrer" className='underline text-salonnblue'>Learn more...</a>

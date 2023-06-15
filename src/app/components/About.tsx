@@ -105,7 +105,7 @@ const About = () => {
                   {educationCards.map((card, index) => (
                     <div 
                     key={index}
-                    className={`w-full md:w-4/5 mx-auto p-4 transition-all duration-200 ease-in-out border-2 rounded-lg cursor-pointer
+                    className={`w-full md:w-11/12 mx-auto p-4 transition-all duration-200 ease-in-out border-2 rounded-lg cursor-pointer
                       ${selectedEdCard === index ? 'border-salonnblue' : 'border-transparent'}
                       ${selectedEdCard === index ? 'bg-transparent border-salonnblue' : 'bg-transparent border-transparent hover:bg-gray-100 hover:border-salonnblue'}`}
                     onClick={() => handleEdClick(index)}>
@@ -136,7 +136,7 @@ const About = () => {
                   {workCards.map((card, index) => (
                     <div 
                     key={index}
-                    className={`w-full md:w-4/5 mx-auto p-4 transition-all duration-200 ease-in-out border-2 rounded-lg cursor-pointer
+                    className={`w-full md:w-11/12 mx-auto p-4 transition-all duration-200 ease-in-out border-2 rounded-lg cursor-pointer
                       ${selectedWorkCard === index ? 'border-salonnblue' : 'border-transparent'}
                       ${selectedWorkCard === index ? 'bg-transparent border-salonnblue' : 'bg-transparent border-transparent hover:bg-gray-100 hover:border-salonnblue'}`}
                     onClick={() => handleWorkClick(index)}>
