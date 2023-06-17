@@ -19,7 +19,7 @@ html {
   }
 
   h1 {
-    @apply text-7xl sm:text-7xl md:text-8xl
+    @apply text-6xl sm:text-7xl md:text-8xl
   }
 
   h2 {
@@ -28,6 +28,10 @@ html {
 
   h3 {
     @apply text-3xl
+  }
+
+  h4 {
+    @apply text-2xl sm:text-3xl
   }
 
   li {

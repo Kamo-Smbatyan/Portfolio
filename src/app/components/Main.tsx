@@ -16,7 +16,7 @@ const Main = () => {
             <div className='w-full h-full text-white mx-auto p-2 flex justify-center items-center absolute z-10'>
                 <div className='w-full'>
                     <h1 className='py-4'>Xander Carruth</h1>
-                    <h3 className='px-4 md:px-1/5'>I am a software developer working to provide a better education experience by creating <span className='text-salonnblue'>Natural Language Processing</span>, <span className='text-salonnblue'>Full Stack</span>, and <span className='text-salonnblue'>Virtual Reality</span> solutions.</h3>
+                    <h4 className='px-4 md:px-1/5'>I am a software developer working to provide a better education experience by creating <span className='text-salonnblue'>Natural Language Processing</span>, <span className='text-salonnblue'>Full Stack</span>, and <span className='text-salonnblue'>Virtual Reality</span> solutions.</h4>
                 </div>
             </div>
             <div id='bubbleRenderer' ref={containerRef} className='w-full h-full absolute z-0'></div>
