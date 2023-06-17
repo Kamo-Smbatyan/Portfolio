@@ -75,7 +75,7 @@ const FresnelShader = {
                 "discard;",
             "} else {",
                 "vec4 reflectedColor = textureCube( tCube, vec3( -vReflect.x, -vReflect.yz ) );",
-                "vec4 refractedColor = vec4( 0.97 );",
+                "vec4 refractedColor = vec4( 0.90 );",
 
                 "refractedColor.r = textureCube( tCube, vec3( vRefract[0].x, vRefract[0].yz ) ).r;",
                 "refractedColor.g = textureCube( tCube, vec3( vRefract[1].x, vRefract[1].yz ) ).g;",

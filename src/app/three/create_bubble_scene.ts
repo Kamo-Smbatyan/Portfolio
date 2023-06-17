@@ -8,7 +8,7 @@ import { TessellateModifier } from 'three/examples/jsm/modifiers/TessellateModif
 export function createBubbleScene(container: HTMLDivElement) {
 
     const scene = new THREE.Scene();
-    var SCREEN_WIDTH = window.innerWidth, SCREEN_HEIGHT = window.innerHeight;
+    var SCREEN_WIDTH = container.offsetWidth, SCREEN_HEIGHT = container.offsetHeight;
     var VIEW_ANGLE = 45, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 20000;
     const camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR);
     scene.add(camera);
@@ -141,8 +141,8 @@ export function createBubbleScene(container: HTMLDivElement) {
     let raycaster = new THREE.Raycaster();
     let mouse = new THREE.Vector2();
     function onMouseClick(event: MouseEvent) {
-        mouse.x = (event.clientX / window.innerWidth) * 2 -1
-        mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+        mouse.x = (event.clientX / container.offsetWidth) * 2 -1
+        mouse.y = -(event.clientY / container.offsetHeight) * 2 + 1;
 
         raycaster.setFromCamera(mouse, camera);
 
@@ -327,9 +327,9 @@ export function createBubbleScene(container: HTMLDivElement) {
 
         // RESIZE HANDLER
         function onWindowResize() {
-            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.aspect = container.offsetWidth / container.offsetHeight;
             camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
         }
         window.addEventListener('resize', onWindowResize);
 
