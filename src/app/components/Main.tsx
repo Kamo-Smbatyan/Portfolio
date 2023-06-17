@@ -19,7 +19,7 @@ const Main = () => {
                     <h4 className='px-4 md:px-1/5'>I am a software developer working to provide a better education experience by creating <span className='text-salonnblue'>Natural Language Processing</span>, <span className='text-salonnblue'>Full Stack</span>, and <span className='text-salonnblue'>Virtual Reality</span> solutions.</h4>
                 </div>
             </div>
-            <div id='bubbleRenderer' ref={containerRef} className='w-full h-full absolute z-0'></div>
+            <div id='bubbleRenderer' ref={containerRef} className='w-full h-screen absolute z-0'></div>
         </div>
     );
 };
