@@ -20,13 +20,13 @@ const EducationCard: React.FC<EducationCardProps> = ({ index, card, selectedEdCa
                <Image className="relative h-auto w-auto my-4" src={card.image} alt={card.experienceName} width={50} />
             </div>
             <div className="pl-8 text-left tracking-widest w-3/4">
-               <p className="text-sm md:text-lg font-bold">{card.experienceName}</p>
-               <p className="text-xs md:text-base">{card.type}</p>
-               <p className="text-xs md:text-base">{card.dates}</p>
+               <p className="text-md md:text-lg font-bold">{card.experienceName}</p>
+               <p className="text-sm md:text-base">{card.type}</p>
+               <p className="text-sm md:text-base">{card.dates}</p>
             </div>
          </div>
          <div
-            className={`w-full text-left pt-2 px-8 tracking-normal transition-all duration-500 ease-in-out overflow-hidden ${selectedEdCard === index ? 'max-h-screen' : 'max-h-0'}`}>
+            className={`w-full text-left text-sm md:text-md pt-2 px-4 md:px-8 tracking-normal transition-all duration-500 ease-in-out overflow-hidden ${selectedEdCard === index ? 'max-h-screen' : 'max-h-0'}`}>
             <p className="text-xs md:text-base">{card.description}</p>
          </div>
       </div>
