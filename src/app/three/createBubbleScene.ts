@@ -331,5 +331,25 @@ export function createBubbleScene(container: HTMLDivElement) {
    window.addEventListener('resize', onWindowResize);
 
    animate();
-   return { renderer };
+
+   function cleanup() {
+      window.removeEventListener('resize', onWindowResize);
+      window.removeEventListener('click', onMouseClick);
+
+      scene.traverse(object => {
+         if (object instanceof THREE.Mesh) {
+            if (object.geometry) object.geometry.dispose();
+            if (object.material) {
+               if (Array.isArray(object.material)) {
+                  object.material.forEach(material => material.dispose());
+               } else {
+                  object.material.dispose();
+               }
+            }
+         }
+      });
+
+      renderer.dispose();
+   }
+   return { renderer, cleanup };
 }
