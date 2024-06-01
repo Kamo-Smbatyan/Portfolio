@@ -1,3 +1,3 @@
 interface Window {
-    __forceSmoothScrollPolyfill__?: boolean;
-  }
+   __forceSmoothScrollPolyfill__?: boolean;
+}

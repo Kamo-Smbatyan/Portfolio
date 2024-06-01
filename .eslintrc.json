@@ -1,3 +1,34 @@
 {
-  "extends": "next/core-web-vitals"
+   "root": true,
+   "plugins": ["@typescript-eslint", "import", "prettier"],
+   "extends": [
+      "airbnb-typescript/base",
+      "prettier",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:import/typescript"
+   ],
+   "parser": "@typescript-eslint/parser",
+   "parserOptions": {
+      "project": "tsconfig.json"
+   },
+   "rules": {
+      "@typescript-eslint/no-unused-vars": "warn",
+      "prefer-const": "warn",
+      "@typescript-eslint/naming-convention": [
+         "error",
+         {
+            "selector": "variable",
+            "format": ["camelCase", "PascalCase", "UPPER_CASE"]
+         },
+         {
+            "selector": "parameter",
+            "format": ["camelCase"]
+         },
+         {
+            "selector": "typeProperty",
+            "format": ["camelCase"],
+            "leadingUnderscore": "allow"
+         }
+      ]
+   }
 }
