@@ -7,7 +7,7 @@ type SidebarProps = {
    handleNav: (isOpen: boolean) => void;
 };
 
-const SidePanel = ({ nav, handleNav }: SidebarProps) => {
+export default function Sidebar({ nav, handleNav }: SidebarProps) {
    const mto = 'mailto:';
    const em = 'acarruth2018@gmail.com';
 
@@ -18,8 +18,7 @@ const SidePanel = ({ nav, handleNav }: SidebarProps) => {
                nav
                   ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] m:w-[45%] h-screen bg-[#242424] p-10 ease-in duration-500'
                   : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
-            }
-         >
+            }>
             <div>
                <div className="flex w-full text-white items-end justify-end">
                   <AiOutlineClose onClick={() => handleNav(false)} />
@@ -72,4 +71,4 @@ const SidePanel = ({ nav, handleNav }: SidebarProps) => {
          </div>
       </div>
    );
-};
+}

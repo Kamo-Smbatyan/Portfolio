@@ -4,13 +4,14 @@ import Link from 'next/link';
 import Bubble from '../../../public/assets/Bubble.png';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import Sidebar from './Sidebar';
 
 const Navbar = () => {
    const [nav, setNav] = useState(false);
    const [shadow, setShadow] = useState(false);
 
-   const handleNav = () => {
-      setNav(!nav);
+   const handleNav = (isOpen: boolean = !nav) => {
+      setNav(isOpen);
    };
 
    useEffect(() => {
@@ -50,10 +51,11 @@ const Navbar = () => {
                   </Link>
                </ul>
                <div className="md:hidden">
-                  <AiOutlineMenu onClick={handleNav} size={25} />
+                  <AiOutlineMenu onClick={() => handleNav} size={25} />
                </div>
             </div>
          </div>
+
          <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
             <div
                className={
@@ -63,7 +65,7 @@ const Navbar = () => {
                }>
                <div>
                   <div className="flex w-full text-white items-end justify-end">
-                     <AiOutlineClose onClick={handleNav} />
+                     <AiOutlineClose onClick={() => handleNav} />
                   </div>
                </div>
                <div className="py-4 text-white flex flex-col">
@@ -115,6 +117,7 @@ const Navbar = () => {
                </div>
             </div>
          </div>
+         {/* <Sidebar nav={nav} handleNav={handleNav} /> */}
       </div>
    );
 };
