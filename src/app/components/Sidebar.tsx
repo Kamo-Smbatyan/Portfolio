@@ -15,9 +15,8 @@ export default function Sidebar({ nav, handleNav }: SidebarProps) {
       <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>
          <div
             className={
-               nav
-                  ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] m:w-[45%] h-screen bg-[#242424] p-10 ease-in duration-500'
-                  : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
+               `fixed top-0 h-screen bg-[#242424] p-10 ease-in duration-300 z-[60] ` +
+               (nav ? 'left-0 w-[75%]' : 'left-[-75%] w-[75%]')
             }>
             <div>
                <div className="flex w-full text-white items-end justify-end">
