@@ -1,15 +1,22 @@
 import { useEffect, useRef } from 'react';
-import { createBubbleScene } from '../three/create_bubble_scene';
+import { createBubbleScene } from '../three/createBubbleScene';
 import '../main.css';
+import { Canvas } from '@react-three/fiber';
+import BubbleScene from './BubbleScene';
 
 const Main = () => {
-   const containerRef = useRef<HTMLDivElement | null>(null);
+   // const containerRef = useRef<HTMLDivElement | null>(null);
 
-   useEffect(() => {
-      if (containerRef.current) {
-         createBubbleScene(containerRef.current);
-      }
-   }, []);
+   // useEffect(() => {
+   //    if (containerRef.current) {
+   //       createBubbleScene(containerRef.current);
+
+   //       return () => {
+   //          containerRef.current?.removeChild(renderer.domElement);
+   //       };
+   //    }
+   //    console.log('creating bubble scene');
+   // }, []);
 
    return (
       <div id="home" className="w-full h-screen text-center relative bg-[#ecf0f3]">
@@ -24,7 +31,8 @@ const Main = () => {
                </h4>
             </div>
          </div>
-         <div id="bubbleRenderer" ref={containerRef} className="w-full h-screen absolute z-0"></div>
+         {/* <div id="bubbleRenderer" ref={containerRef} className="w-full h-screen absolute z-0"></div> */}
+         <BubbleScene />
       </div>
    );
 };

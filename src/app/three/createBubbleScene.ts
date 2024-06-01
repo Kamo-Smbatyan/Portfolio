@@ -331,4 +331,5 @@ export function createBubbleScene(container: HTMLDivElement) {
    window.addEventListener('resize', onWindowResize);
 
    animate();
+   return { renderer };
 }
