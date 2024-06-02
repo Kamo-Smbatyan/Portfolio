@@ -9,7 +9,7 @@ type BlogDetailsProps = {
 };
 
 const BlogDetails: React.FC<BlogDetailsProps> = ({ blog, slug }) => {
-   console.log(blog);
+   // console.log(blog);
    return (
       <div className="px-10 bg-accent text-light py-2 flex items-center justify-around flex-wrap text-xl font-medium mx-10 rounded-lg">
          <time className="m-3">{format(parseISO(blog.publishedAt), 'LLLL d, yyyy')}</time>

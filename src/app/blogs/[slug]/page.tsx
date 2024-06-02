@@ -2,6 +2,7 @@ import Tag from '@src/components/elements/Tag';
 import { allBlogs } from '@contentlayer/generated';
 import Image from 'next/image';
 import BlogDetails from '@src/components/blog/BlogDetails';
+import RenderMdx from '@src/components/blog/RenderMdx';
 
 export default function Page({ params }: { params: { slug: string } }) {
    const blog = allBlogs.find(pageBlog => pageBlog._raw.flattenedPath === params.slug);
@@ -31,6 +32,11 @@ export default function Page({ params }: { params: { slug: string } }) {
             />
          </div>
          <BlogDetails blog={blog!} slug={params.slug} />
+         <div className="grid grid-cols-12 gap-16 mt-8 px-10">
+            <div className="col-span-8 col-start-3">
+               <RenderMdx blog={blog!} />
+            </div>
+         </div>
       </article>
    );
 }

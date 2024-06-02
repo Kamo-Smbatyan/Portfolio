@@ -21,8 +21,8 @@ export type Blog = {
   isPublished: boolean
   author: string
   tags?: string[] | undefined
-  /** Markdown file body */
-  body: Markdown
+  /** MDX file body */
+  body: MDX
   url: string
   readingTime: json
 }  

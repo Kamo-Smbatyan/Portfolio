@@ -49,5 +49,5 @@ module.exports = {
          outline: ['focus'],
       },
    },
-   plugins: [],
+   plugins: [require('@tailwindcss/typography')],
 };
