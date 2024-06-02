@@ -30,5 +30,6 @@
             "leadingUnderscore": "allow"
          }
       ]
-   }
+   },
+   "ignorePatterns": ["*.config.js"]
 }

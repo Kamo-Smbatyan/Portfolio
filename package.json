@@ -9,6 +9,7 @@
       "lint": "next lint"
    },
    "dependencies": {
+      "@contentlayer/source-files": "^0.3.4",
       "@emailjs/browser": "^3.11.0",
       "@react-three/fiber": "^8.16.7",
       "@types/node": "20.2.3",
@@ -22,7 +23,8 @@
       "emailjs-com": "^3.2.0",
       "eslint": "^8.57.0",
       "eslint-config-next": "13.4.3",
-      "next": "^14.2.3",
+      "next": "^13.4.0",
+      "next-contentlayer": "^0.3.4",
       "postcss": "^8.4.38",
       "react": "18.2.0",
       "react-dom": "18.2.0",

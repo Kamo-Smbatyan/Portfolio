@@ -24,6 +24,10 @@ module.exports = {
          colors: {
             salonnblue: '#344d94',
          },
+         fontFamily: {
+            rb: ["var(--font-rb)"],
+            in: ["var(--font-in)"]
+         },
          fontSize: {
             xxs: '0.5rem',
          },

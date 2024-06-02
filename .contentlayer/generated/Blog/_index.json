@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Blog One Title",
+    "publishedAt": "2024-06-02T00:00:00.000Z",
+    "updatedAt": "2024-06-02T00:00:00.000Z",
+    "description": "This is the description for blog one",
+    "image": "../../public/blogs/books-image.jpg",
+    "isPublished": true,
+    "author": "Xander Carruth",
+    "tags": [
+      "testing"
+    ],
+    "body": {
+      "raw": "\n# this is the h1 element\n\n## this is the h2 element\n",
+      "html": "<h1>this is the h1 element</h1>\n<h2>this is the h2 element</h2>"
+    },
+    "_id": "blog-one/index.mdx",
+    "_raw": {
+      "sourceFilePath": "blog-one/index.mdx",
+      "sourceFileName": "index.mdx",
+      "sourceFileDir": "blog-one",
+      "contentType": "mdx",
+      "flattenedPath": "blog-one"
+    },
+    "type": "Blog",
+    "url": "/blogs/blog-one"
+  }
+]

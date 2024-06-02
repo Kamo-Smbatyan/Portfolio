@@ -1,0 +1,10 @@
+
+.project-card-background {
+    background-image: url(/assets/project_pics/project_bubble.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+ }
+
+.project-card:hover {
+  transform: scale(1.05);
+}

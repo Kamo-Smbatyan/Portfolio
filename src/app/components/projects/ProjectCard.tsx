@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { ProjectCardInfo } from './data/projectCards';
+import '@src/app/ProjectCard.css';
 
 type ProjectCardProps = {
    index: number;
@@ -8,14 +9,8 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ index, card }) => {
    return (
-      <div className="p-4 rounded-lg items-center relative overflow-hidden">
-         <div
-            className="absolute inset-0 z-0"
-            style={{
-               backgroundImage: `url(/assets/project_pics/project_bubble.png)`,
-               backgroundSize: '100% 100%',
-               backgroundRepeat: 'no-repeat',
-            }}></div>
+      <div className="p-4 rounded-lg project-card items-center relative overflow-hidden">
+         <div className="absolute inset-0 z-0 project-card-background" />
          <div className="relative z-10 py-4 lg:pt-5 lg:pb-8 px-6 sm:px-14 md:px-16 lg:px-20">
             <p id="project-title" className="text-center mb-2">
                {card.title}
