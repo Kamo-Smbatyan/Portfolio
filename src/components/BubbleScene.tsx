@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { createBubbleScene } from '../three/createBubbleScene';
+import { createBubbleScene } from './three/createBubbleScene';
 
 const BubbleScene = () => {
    const containerRef = useRef<HTMLDivElement | null>(null);

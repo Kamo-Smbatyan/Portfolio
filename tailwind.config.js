@@ -23,10 +23,15 @@ module.exports = {
          },
          colors: {
             salonnblue: '#344d94',
+            dark: '#1b1b1b',
+            light: '#fff',
+            accent: '#7B00D3',
+            accentDark: '#ffdb4d',
+            gray: '#747474',
          },
          fontFamily: {
-            rb: ["var(--font-rb)"],
-            in: ["var(--font-in)"]
+            rb: ['var(--font-rb)'],
+            in: ['var(--font-in)'],
          },
          fontSize: {
             xxs: '0.5rem',

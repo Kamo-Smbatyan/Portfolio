@@ -3,7 +3,15 @@
   "publishedAt": "2024-06-02T00:00:00.000Z",
   "updatedAt": "2024-06-02T00:00:00.000Z",
   "description": "This is the description for blog one",
-  "image": "../../public/blogs/books-image.jpg",
+  "image": {
+    "filePath": "../public/blogs/books-image.jpg",
+    "relativeFilePath": "../../public/blogs/books-image.jpg",
+    "format": "jpeg",
+    "height": 1183,
+    "width": 1280,
+    "aspectRatio": 1.0819949281487744,
+    "blurhashDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA+UlEQVR4nCWMvUrDYABFv7dxqo2VNmnBtlNpMF9+TFqrwShBxVp/GkGiQpEidQlZRBycRZG+gODgIFQQnAQHX8HdweWIcbvce88RSsmmWZcYekBeNZmv2+y1OgwCP8virwykS7NmZ4fJ1SnJVkjXWyLthYhGVRKv+tyPjimqBt8fT4xHB4zPYq77a/8GpWRyNzzi5XLIz+cbt8kJX++PTJ5fEdJaz9SFiqRVt7iIdmjUHBy9Q3LzgCjMuXSX91E0yfnKIgNd0mv7zGpmBgql4lIsL5AvStLdPodtlxnVysYoThE51Waquk256pHTDEJvg+mSRKs4bIYRvxteh7sqSj5RAAAAK3RFWHRDcmVhdGlvbiBUaW1lAFN1biwgMDIgSnVuIDIwMjQgMjE6MjI6MjAgR01UDosFhwAAAC10RVh0U29mdHdhcmUAZ2l0aHViLmNvbS9tYXRtZW4vSW1hZ2VTY3JpcHQgdjEuMy4wGMaf9gAAAABJRU5ErkJggg=="
+  },
   "isPublished": true,
   "author": "Xander Carruth",
   "tags": [
@@ -22,5 +30,11 @@
     "flattenedPath": "blog-one"
   },
   "type": "Blog",
-  "url": "/blogs/blog-one"
+  "url": "/blogs/blog-one",
+  "readingTime": {
+    "text": "1 min read",
+    "minutes": 0.06,
+    "time": 3600,
+    "words": 12
+  }
 }

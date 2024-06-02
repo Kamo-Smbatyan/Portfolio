@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { createBubbleScene } from '../three/createBubbleScene';
-import '../main.css';
+import { createBubbleScene } from './three/createBubbleScene';
+import '@src/app/main.css';
 import { Canvas } from '@react-three/fiber';
 import BubbleScene from './BubbleScene';
 

@@ -21,7 +21,8 @@
       ],
       "paths": {
          "@src/*": ["./src/*"],
-         "@public/*": ["./public/*"]
+         "@public/*": ["./public/*"],
+         "@contentlayer/*": ["./.contentlayer/*"],
       }
    },
    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/pages/api/send-email.js"],
