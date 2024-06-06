@@ -1,17 +1,58 @@
 import Tag from '@src/components/elements/Tag';
-import { allBlogs } from '@contentlayer/generated';
+import { allBlogs, ImageFieldData } from '@contentlayer/generated';
 import Image from 'next/image';
 import BlogDetails from '@src/components/blog/BlogDetails';
 import RenderMdx from '@src/components/blog/RenderMdx';
-import GithubSlugger, { slug } from 'github-slugger';
-
-const slugger = new GithubSlugger();
+import { slug } from 'github-slugger';
+import siteMetadata from '@src/utils/siteMetaData';
 
 export async function generateStaticParams() {
    return allBlogs.map(blog => ({ slug: blog._raw.flattenedPath }));
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+   const blog = allBlogs.find(pageBlog => pageBlog._raw.flattenedPath === params.slug);
+   if (!blog) {
+      return;
+   }
+
+   const publishedAt = new Date(blog.publishedAt).toISOString();
+   const modifiedAt = new Date(blog.updatedAt || blog.publishedAt).toISOString();
+
+   let imageList: string[] | ImageFieldData[] = [siteMetadata.socialBanner];
+   if (blog.image) {
+      imageList = [siteMetadata.siteUrl + blog.image.filePath.replace('../public', '')];
+   }
+   // const ogImages = imageList.map(img => {
+   //    return { url: img.includes('http') ? img : siteMetadata.siteUrl + img };
+   // });
+   const authors = [blog.author];
+
+   return {
+      title: blog.title,
+      description: blog.description,
+      openGraph: {
+         title: blog.title,
+         description: blog.description,
+         url: siteMetadata.siteUrl + blog.url,
+         siteName: siteMetadata.title,
+         images: imageList,
+         locale: 'en_US',
+         type: 'article',
+         publishedTime: publishedAt,
+         modifiedTime: modifiedAt,
+         authors: authors.length > 0 ? authors : [siteMetadata.author],
+      },
+      twitter: {
+         card: 'summary_large_image',
+         title: blog.title,
+         description: blog.description,
+         images: imageList,
+      },
+   };
+}
+
+export default function BlogPage({ params }: { params: { slug: string } }) {
    const blog = allBlogs.find(pageBlog => pageBlog._raw.flattenedPath === params.slug);
 
    return (
