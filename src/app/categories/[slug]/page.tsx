@@ -25,6 +25,16 @@ export async function generateStaticParams() {
    return paths;
 }
 
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+   return {
+      title: `${params.slug
+         .split('-')
+         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+         .join(' ')} Blogs`,
+      description: `Learn more about ${params.slug == 'all' ? 'education' : params.slug.replaceAll('-', ' ')} through my blogs!`,
+   };
+}
+
 const CategoryPage = ({ params }: { params: { slug: string } }) => {
    const allCategories = ['all'];
    const blogs = allBlogs.filter(blog => {

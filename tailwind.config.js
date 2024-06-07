@@ -42,6 +42,12 @@ module.exports = {
          borderWidth: {
             1: '1px',
          },
+         screens: {
+            sxl: '1180px',
+            // @media (mid-width: 1180px){...}
+            xs: '480px',
+            // @media (mid-width: 1180px){...}
+         },
       },
    },
    variants: {
