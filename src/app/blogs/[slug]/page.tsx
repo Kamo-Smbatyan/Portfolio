@@ -64,7 +64,7 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
                   link={`/categories/${slug(blog?.tags[0] ?? '')}`}
                   className="px-6 text-sm py-2"
                />
-               <h1 className="inline-block mt-6 font-semibold capitalize text-light text-5xl leading-normal realtive w-5/6">
+               <h1 className="inline-block mt-6 font-semibold capitalize text-light text-2xl md:text-3xl lg:text-5xl leading-normal realtive w-5/6">
                   {blog?.title}
                </h1>
             </div>
@@ -80,8 +80,8 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
             />
          </div>
          <BlogDetails blog={blog!} slug={params.slug} />
-         <div className="grid grid-cols-12 gap-16 mt-8 px-10">
-            <div className="col-span-8 col-start-3">
+         <div className="grid grid-cols-12 gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
+            <div className="lg:col-start-3">
                <RenderMdx blog={blog!} />
             </div>
          </div>
