@@ -1,7 +1,8 @@
 import { cx } from '@src/utils';
 import './globals.css';
 import { Inter, Roboto } from 'next/font/google';
-import siteMetadata from '@src/utils/siteMetaData';
+// eslint-disable-next-line @typescript-eslint/no-var-requires, import/extensions
+const siteMetadata = require('../utils/siteMetaData.ts');
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-in' });
 const roboto = Roboto({ weight: '300', subsets: ['latin'], display: 'swap', variable: '--font-rb' });

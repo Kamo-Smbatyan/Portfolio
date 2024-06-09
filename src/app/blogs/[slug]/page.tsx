@@ -4,7 +4,8 @@ import Image from 'next/image';
 import BlogDetails from '@src/components/blog/BlogDetails';
 import RenderMdx from '@src/components/blog/RenderMdx';
 import { slug } from 'github-slugger';
-import siteMetadata from '@src/utils/siteMetaData';
+// eslint-disable-next-line @typescript-eslint/no-var-requires, import/extensions
+const siteMetadata = require('../../../utils/siteMetaData.ts');
 
 export async function generateStaticParams() {
    return allBlogs.map(blog => ({ slug: blog._raw.flattenedPath }));
