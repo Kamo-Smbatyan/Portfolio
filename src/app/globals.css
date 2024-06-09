@@ -107,7 +107,7 @@ code {
 
 @layer base {
    body {
-      @apply bg-black text-[#1f2937] tracking-wide;
+      @apply bg-custom-black text-[#1f2937] tracking-wide;
    }
 
    h1,

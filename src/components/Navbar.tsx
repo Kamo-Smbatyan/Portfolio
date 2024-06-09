@@ -28,7 +28,7 @@ const Navbar = () => {
    }, []);
 
    return (
-      <div className="bg-[#242424] bg-opacity-85 w-full h-15 z-[100]">
+      <div className="bg-[#242424] bg-opacity-85 w-full h-16 fixed top-0 z-[100]">
          <div className="flex justify-between items-center text-white w-full h-full px-2 2xl:px-16">
             <div className="flex items-center">
                <Image src={Bubble} alt="Portfolio icon" className="mx-2 h-7 w-7" />

@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <html lang="en">
          <body className={cx(inter.variable, roboto.variable, 'font-rb')}>
             <Navbar />
-            {children}
+            <div className="mt-16">{children}</div>
          </body>
       </html>
    );

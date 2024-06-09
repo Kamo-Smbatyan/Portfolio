@@ -28,9 +28,9 @@ module.exports = {
             'off-white': '#ecf0f3',
             dark: '#1b1b1b',
             light: '#fff',
-            accent: '#7B00D3',
-            accentDark: '#ffdb4d',
-            gray: '#747474',
+            accent: 'var(--color-salo-violet)',
+            'custom-black': '#121212',
+            'light-gray': '#222222',
             'salo-violet': 'var(--color-salo-violet)',
          },
          fontFamily: {
