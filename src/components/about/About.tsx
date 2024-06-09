@@ -18,7 +18,7 @@ const About = () => {
    };
 
    return (
-      <div id="about" className="w-full p-2 flex py-16">
+      <div id="about" className="w-full bg-off-white p-2 flex py-16">
          <div className="w-full text-center">
             <h2 className="py-4 tracking-widest">About Me</h2>
             <div className="grid md:grid-cols-2 pt-8">

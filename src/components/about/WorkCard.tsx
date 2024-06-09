@@ -13,8 +13,8 @@ const WorkCard: React.FC<WorkCardProps> = ({ index, card, selectedWorkCard, hand
       <div
          key={index}
          className={`w-full md:w-11/12 mx-auto p-4 transition-all duration-200 ease-in-out border-2 rounded-lg cursor-pointer
-                      ${selectedWorkCard === index ? 'border-salonnblue' : 'border-transparent'}
-                      ${selectedWorkCard === index ? 'bg-transparent border-salonnblue' : 'bg-transparent border-transparent hover:bg-gray-100 hover:border-salonnblue'}`}
+                      ${selectedWorkCard === index ? 'border-salo-blue' : 'border-transparent'}
+                      ${selectedWorkCard === index ? 'bg-transparent border-salo-blue' : 'bg-transparent border-transparent hover:bg-gray-100 hover:border-salo-blue'}`}
          onClick={() => handleWorkClick(index)}>
          <div className="flex items-start space-y-4">
             <div className="w-1/4 flex justify-center">

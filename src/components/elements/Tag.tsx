@@ -13,7 +13,7 @@ const Tag: React.FC<TagProps> = ({ link = '#', name, ...props }) => {
       <Link
          href={link}
          className={cx(
-            'inline-block py-2 sm:py-3 px-6 sm:px-10 bg-black text-white rounded-full capitalize font-semibold border-2 border-solid border-light hover:scale-105 transition-all ease duration-200 text-sm sm:text-base',
+            'inline-block py-2 sm:py-3 px-1 bg-salo-violet text-white rounded-md capitalize font-semibold hover:scale-105 transition-all ease duration-200 text-sm sm:text-base',
             props.className ?? '',
          )}>
          {name}

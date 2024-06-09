@@ -22,12 +22,16 @@ module.exports = {
             'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
          },
          colors: {
-            salonnblue: '#344d94',
+            'light-salo-blue': 'var(--color-light-salo-blue)',
+            'salo-blue': 'var(--color-salo-blue)',
+            'dark-salo-blue': 'var(--color-dark-salo-blue)',
+            'off-white': '#ecf0f3',
             dark: '#1b1b1b',
             light: '#fff',
             accent: '#7B00D3',
             accentDark: '#ffdb4d',
             gray: '#747474',
+            'salo-violet': 'var(--color-salo-violet)',
          },
          fontFamily: {
             rb: ['var(--font-rb)'],
@@ -37,7 +41,7 @@ module.exports = {
             xxs: '0.5rem',
          },
          outline: {
-            salonnblue: '2px solid #163898', // replace with your preferred shade of blue
+            'salo-blue': '2px solid #73e8e4',
          },
          borderWidth: {
             1: '1px',

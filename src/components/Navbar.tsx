@@ -27,11 +27,8 @@ const Navbar = () => {
       window.addEventListener('scroll', handleShadow);
    }, []);
 
-   const mto = 'mailto:';
-   const em = 'acarruth2018@gmail.com';
-
    return (
-      <div className="bg-[#242424] bg-opacity-85 fixed w-full h-15 z-[100]">
+      <div className="bg-[#242424] bg-opacity-85 w-full h-15 z-[100]">
          <div className="flex justify-between items-center text-white w-full h-full px-2 2xl:px-16">
             <div className="flex items-center">
                <Image src={Bubble} alt="Portfolio icon" className="mx-2 h-7 w-7" />
@@ -52,7 +49,7 @@ const Navbar = () => {
                      <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
                   </Link>
                   <Link href="/blog-home">
-                     <li className="ml-10 text-sm uppercase hover:border-b">Blog</li>
+                     <li className="ml-10 text-sm uppercase nav-item">Blog</li>
                   </Link>
                </ul>
                <div className="md:hidden">

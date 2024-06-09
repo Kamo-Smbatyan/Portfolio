@@ -12,8 +12,8 @@ const EducationCard: React.FC<EducationCardProps> = ({ index, card, selectedEdCa
    return (
       <div
          className={`w-full md:w-11/12 mx-auto p-4 transition-all duration-200 ease-in-out border-2 rounded-lg cursor-pointer
-                       ${selectedEdCard === index ? 'border-salonnblue' : 'border-transparent'}
-                       ${selectedEdCard === index ? 'bg-transparent border-salonnblue' : 'bg-transparent border-transparent hover:bg-gray-100 hover:border-salonnblue'}`}
+                       ${selectedEdCard === index ? 'border-salo-blue' : 'border-transparent'}
+                       ${selectedEdCard === index ? 'bg-transparent border-salo-blue' : 'bg-transparent border-transparent hover:bg-gray-100 hover:border-salo-blue'}`}
          onClick={() => handleEdClick(index)}>
          <div className="flex items-start space-y-4">
             <div className="w-1/4 flex justify-center">

@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, card }) => {
             </p>
             <div className="flex flex-wrap justify-center">
                {card.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="m-1 px-2 py-1 text-xxs md:text-sm bg-salonnblue rounded-lg">
+                  <div key={skillIndex} className="m-1 px-2 py-1 text-xxs md:text-sm bg-salo-blue rounded-lg">
                      {skill}{' '}
                   </div>
                ))}{' '}
@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, card }) => {
             <p className="text-xs md:text-base">
                {card.description}
                &nbsp;
-               <a href={card.link} target="_blank" rel="noopener noreferrer" className="underline text-salonnblue">
+               <a href={card.link} target="_blank" rel="noopener noreferrer" className="underline text-salo-blue">
                   Learn more...
                </a>
             </p>

@@ -71,9 +71,43 @@ code {
    color: #747474;
  }
 
+ /* slide animation */
+ @keyframes slide {
+   0% {
+     background-position: 0% 100%;
+   }
+   100% {
+     background-position: 200% 100%;
+   }
+ }
+ 
+ .nav-item {
+   position: relative;
+   overflow: hidden;
+ }
+ 
+ .nav-item::after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 3px; /* Adjust the height of the underline */
+   background: linear-gradient(90deg, var(--color-salo-blue), var(--color-salo-violet), var(--color-salo-blue));
+   background-size: 200% 100%;
+   transition: transform 0.5s ease;
+   transform: translateX(-100%);
+ }
+ 
+ .nav-item:hover::after {
+   animation: slide 4s linear infinite;
+   transform: translateX(0%);
+ }
+ /* end slide animation */
+
 @layer base {
    body {
-      @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+      @apply bg-black text-[#1f2937] tracking-wide;
    }
 
    h1,
@@ -111,5 +145,24 @@ code {
 
    #project-title {
       @apply text-base md:text-3xl;
+   }
+
+   :root {
+      --color-gray-100: #f8f8f8;
+      --color-gray-200: #f1f1f1;
+      --color-gray-300: #e1e1e1;
+      --color-material-black: #1f1f1f;
+      --color-material-gray: #28292a;
+      --color-light-material-gray: #363636;
+
+
+      --color-light-salo-blue: #77f3ef;
+      --color-salo-blue: #73e8e4;
+      --color-dark-salo-blue: #48b4c1;
+      --color-salo-violet: #fd10ff;
+
+      --color-destructive-red: #ff0000;
+
+      --button-gradient: linear-gradient(90deg, var(--color-light-salo-blue) 0%, var(--color-dark-salo-blue) 100%);
    }
 }

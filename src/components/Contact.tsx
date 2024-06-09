@@ -48,11 +48,11 @@ const Contact = () => {
    };
 
    return (
-      <div id="contact" className="w-full">
+      <div id="contact" className="w-full bg-off-white">
          <div className="m-auto px-2 py-16 w-full">
             <h2 className="text-center tracking-widest">Contact</h2>
             <div className="grid pt-8 md:pt-10 px-3 md:px-10 lg:grid-cols-8 gap-8">
-               <div className="col-span-4 lg:col-span-5 w-full h-auto bg-black text-white shadow-xl shadow-salonnblue rounded-xl lg:p-4">
+               <div className="col-span-4 lg:col-span-5 w-full h-auto bg-black text-white shadow-xl shadow-salo-blue rounded-xl lg:p-4">
                   <div className="p-4">
                      <form ref={form} onSubmit={handleSubmit}>
                         <h3 className="py-2 md:py-4 text-center">Get In Touch</h3>
@@ -61,7 +61,7 @@ const Contact = () => {
                               <label className="uppercase text-sm py-2">Name</label>
                               <input
                                  name="name"
-                                 className="border-2 rounded-lg p-2 md:p-3 flex bg-gray-300 text-black focus:outline-none focus:border-salonnblue"
+                                 className="border-2 rounded-lg p-2 md:p-3 flex bg-gray-300 text-black focus:outline-none focus:border-salo-blue"
                                  type="text"
                                  required
                               />
@@ -70,7 +70,7 @@ const Contact = () => {
                               <label className="uppercase text-sm py-2">Phone Number</label>
                               <input
                                  name="phoneNumber"
-                                 className="border-2 rounded-lg p-2 md:p-3 flex  bg-gray-300 text-black focus:outline-none focus:border-salonnblue"
+                                 className="border-2 rounded-lg p-2 md:p-3 flex  bg-gray-300 text-black focus:outline-none focus:border-salo-blue"
                                  type="text"
                               />
                            </div>
@@ -79,7 +79,7 @@ const Contact = () => {
                            <div className="flex flex-col">
                               <label className="uppercase text-sm py-2">Email</label>
                               <input
-                                 className="border-2 rounded-lg p-2 md:p-3 flex  bg-gray-300 text-black focus:outline-none focus:border-salonnblue"
+                                 className="border-2 rounded-lg p-2 md:p-3 flex  bg-gray-300 text-black focus:outline-none focus:border-salo-blue"
                                  type="email"
                                  name="email"
                                  required
@@ -91,7 +91,7 @@ const Contact = () => {
                               <label className="uppercase text-sm py-2">Subject</label>
                               <input
                                  name="subject"
-                                 className="border-2 rounded-lg p-2 md:p-3 flex  bg-gray-300 text-black focus:outline-none focus:border-salonnblue"
+                                 className="border-2 rounded-lg p-2 md:p-3 flex  bg-gray-300 text-black focus:outline-none focus:border-salo-blue"
                                  type="text"
                                  required
                               />
@@ -102,21 +102,20 @@ const Contact = () => {
                               <label className="uppercase text-sm py-2">Message</label>
                               <textarea
                                  name="message"
-                                 className="border-2 rounded-lg p-2 md:p-3  bg-gray-300 text-black focus:outline-none focus:border-salonnblue"
+                                 className="border-2 rounded-lg p-2 md:p-3  bg-gray-300 text-black focus:outline-none focus:border-salo-blue"
                                  rows={7}
-                                 required
-                              ></textarea>
+                                 required></textarea>
                            </div>
                         </div>
                         <div className="flex flex-col" style={{ display: 'none' }}>
                            <label className="uppercase text-sm py-2">Favorite color (honeypot)</label>
                            <input
                               name="favoriteColor"
-                              className="border-2 rounded-lg p-2 md:p-3 flex bg-gray-300 text-black focus:outline-none focus:border-salonnblue"
+                              className="border-2 rounded-lg p-2 md:p-3 flex bg-gray-300 text-black focus:outline-none focus:border-salo-blue"
                               type="text"
                            />
                         </div>
-                        <button className="w-full p-4 text-white bg-gradient-to-r from-[#0e286e] to-[#1942b3] mt-4">
+                        <button className="w-full p-4 text-white bg-gradient-to-r from-light-salo-blue to-dark-salo-blue mt-4">
                            Send Message
                         </button>
                         <div className="text-center py-2">{status}</div>
@@ -124,17 +123,17 @@ const Contact = () => {
                   </div>
                </div>
                <div className="col-span-4 lg:col-span-3 flex lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4 justify-evenly lg:justify-between items-center lg:my-20 lg:ml-0 lg:mr-0">
-                  <div className="rounded-full w-13 h-13 sm:w-20 sm:h-20 flex items-center justify-center bg-black shadow-lg text-white shadow-salonnblue p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="rounded-full w-13 h-13 sm:w-20 sm:h-20 flex items-center justify-center bg-black shadow-lg text-white shadow-salo-blue p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                      <a href="https://www.linkedin.com/in/xander-carruth/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedinIn className="w-7 h-7 sm:w-8 sm:h-8" />
                      </a>
                   </div>
-                  <div className="rounded-full w-13 h-13 sm:w-20 sm:h-20 flex items-center justify-center bg-black shadow-lg text-white shadow-salonnblue p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="rounded-full w-13 h-13 sm:w-20 sm:h-20 flex items-center justify-center bg-black shadow-lg text-white shadow-salo-blue p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                      <a href="https://github.com/xander-carruth" target="_blank" rel="noopener noreferrer">
                         <FaGithub className="w-7 h-7 sm:w-8 sm:h-8" />
                      </a>
                   </div>
-                  <div className="rounded-full w-13 h-13 sm:w-20 sm:h-20 flex items-center justify-center bg-black shadow-lg text-white shadow-salonnblue p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <div className="rounded-full w-13 h-13 sm:w-20 sm:h-20 flex items-center justify-center bg-black shadow-lg text-white shadow-salo-blue p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                      <a href={`${mto}${em}`} target="_blank" rel="noopener noreferrer">
                         <AiOutlineMail className="w-7 h-7 sm:w-8 sm:h-8" />
                      </a>
