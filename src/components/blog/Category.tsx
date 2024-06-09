@@ -14,9 +14,11 @@ const Category: React.FC<CategoryProps> = ({ link = '#', name, active, ...props 
       <Link
          href={link}
          className={cx(
-            'inline-block py-1.5 md:py-2 px-6 md:px-10 rounded-full border-2 border-solid border-dark hover:scale-105 transition-all ease duration-200 m-2',
+            'inline-block py-1.5 md:py-2 px-2 md:px-5 rounded-md border transition-all font-bold ease duration-200 m-2',
             props.className ?? '',
-            active ? 'bg-dark text-light' : 'bg-light text-dark',
+            active
+               ? 'bg-dark-salo-violet border-dark-salo-violet text-light'
+               : 'bg-salo-violet border-salo-violet hover:bg-light-gray text-dark hover:text-light',
          )}>
          {name}
       </Link>

@@ -21,6 +21,8 @@ const RenderMdx: React.FC<{ blog: Blog }> = ({ blog }) => {
             prose-blockquote:rounded-r-lg
             
             prose-li:marker:text-accent
+
+            prose-invert
       ">
          <MDXContent components={mdxComponents} />
       </div>

@@ -32,6 +32,7 @@ module.exports = {
             'custom-black': '#121212',
             'light-gray': '#222222',
             'salo-violet': 'var(--color-salo-violet)',
+            'dark-salo-violet': '#ae18bb',
          },
          fontFamily: {
             rb: ['var(--font-rb)'],

@@ -105,9 +105,11 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
                   sizes="100vw"
                />
             </div>
-            <BlogDetails blog={blog!} slug={params.slug} />
-            <div className="grid grid-cols-12 gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
-               <div className="col-span-12 lg:col-span-8 lg:col-start-3">
+            <div className="grid grid-cols-12 px-5 md:px-10 mb-20">
+               <div className="col-span-12">
+                  <BlogDetails blog={blog!} slug={params.slug} />
+               </div>
+               <div className="mt-4 col-span-12 lg:col-span-8 lg:col-start-3">
                   <RenderMdx blog={blog!} />
                </div>
             </div>

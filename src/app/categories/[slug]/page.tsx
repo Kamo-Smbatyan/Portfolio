@@ -50,14 +50,18 @@ const CategoryPage = ({ params }: { params: { slug: string } }) => {
       });
    });
 
+   const blogTopic = `${params.slug
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ')} Blogs`;
+
    return (
-      <article className="mt-12 flex flex-col text-dark">
+      <article className="mt-12 flex flex-col text-light">
          <div className="px-5 sm:px-10 md:px-24 sxl:px-32 flex flex-col">
-            <h1 className="mt-6 font-semibold text-2xl md:text-4xl lg:text-5xl">#{params.slug}</h1>
-            <span className="mt-2 inline-block"> Discover more categories and expand your knowledge!</span>
+            <h1 className="mt-6 font-semibold text-2xl md:text-4xl lg:text-5xl">{blogTopic}</h1>
          </div>
          <Categories categories={allCategories} currentSlug={params.slug} />
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-16 mt-5 sm:mt-10 md:mt-24 sxl:mt-32 px-5 sm:px-10 md:px-24 sxl:px-32">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-16 mt-8 sm:mt-14 md:mt-20 px-5 sm:px-10 md:px-24 sxl:px-32 mb-20">
             {blogs.map((blog, index) => (
                <article key={index} className="col-span-1 row-span-1 relative">
                   <BlogLayoutThree blog={blog} />
