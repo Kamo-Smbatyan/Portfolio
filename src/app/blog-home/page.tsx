@@ -8,7 +8,7 @@ import RecentPosts from '../../components/blog-home/RecentPosts';
 const BlogHome = () => {
    return (
       <div>
-         <Navbar />
+         {/* <Navbar /> */}
          <div className="flex flex-col items-center justify-center">
             <HomeCoverSection blogs={allBlogs} />
             <FeaturedPosts blogs={allBlogs} />

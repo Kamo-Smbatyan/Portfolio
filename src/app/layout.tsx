@@ -1,6 +1,7 @@
 import { cx } from '@src/utils';
 import './globals.css';
 import { Inter, Roboto } from 'next/font/google';
+import Navbar from '@src/components/Navbar';
 // eslint-disable-next-line @typescript-eslint/no-var-requires, import/extensions
 const siteMetadata = require('../utils/siteMetaData.ts');
 
@@ -45,7 +46,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
    return (
       <html lang="en">
-         <body className={cx(inter.variable, roboto.variable, 'font-rb')}>{children}</body>
+         <body className={cx(inter.variable, roboto.variable, 'font-rb')}>
+            <Navbar />
+            {children}
+         </body>
       </html>
    );
 }

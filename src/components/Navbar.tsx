@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -49,6 +50,9 @@ const Navbar = () => {
                   </Link>
                   <Link href="/#contact">
                      <li className="ml-10 text-sm uppercase hover:border-b">Contact</li>
+                  </Link>
+                  <Link href="/blog-home">
+                     <li className="ml-10 text-sm uppercase hover:border-b">Blog</li>
                   </Link>
                </ul>
                <div className="md:hidden">
