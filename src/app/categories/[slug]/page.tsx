@@ -61,7 +61,7 @@ const CategoryPage = ({ params }: { params: { slug: string } }) => {
             <h1 className="mt-6 font-semibold text-2xl md:text-4xl lg:text-5xl">{blogTopic}</h1>
          </div>
          <Categories categories={allCategories} currentSlug={params.slug} />
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-16 mt-8 sm:mt-14 md:mt-20 px-5 sm:px-10 md:px-24 sxl:px-32 mb-20">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-6 sm:gap-16 mt-8 sm:mt-14 md:mt-20 px-5 sm:px-10 md:px-24 sxl:px-32 mb-20">
             {blogs.map((blog, index) => (
                <article key={index} className="col-span-1 row-span-1 relative">
                   <BlogLayoutThree blog={blog} />

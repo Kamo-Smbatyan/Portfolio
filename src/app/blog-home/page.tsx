@@ -9,7 +9,7 @@ const BlogHome = () => {
    return (
       <div>
          {/* <Navbar /> */}
-         <div className="flex flex-col items-center justify-center">
+         <div className="flex flex-col items-center justify-center mb-20">
             <HomeCoverSection blogs={allBlogs} />
             <FeaturedPosts blogs={allBlogs} />
             <RecentPosts blogs={allBlogs} />

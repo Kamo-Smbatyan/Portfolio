@@ -23,7 +23,7 @@ const RecentPosts: React.FC<RecentPostsProps> = ({ blogs }) => {
                view all
             </Link>
          </div>
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-16 mt-16">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-6 sm:gap-16 mt-6 sm:mt-8">
             {sortedBlogs.slice(0, 6).map((blog, index) => {
                return (
                   <article className="col-span-1 row-span-1 relative">

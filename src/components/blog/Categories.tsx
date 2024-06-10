@@ -9,7 +9,7 @@ type CategoriesProps = {
 
 const Categories: React.FC<CategoriesProps> = ({ categories, currentSlug }) => {
    return (
-      <div className="px-0 md:px-10 sxl:px-20 mt-5 placeholder:text-dark py-4 flex items-start flex-wrap font-medium mx-5 md:mx-10">
+      <div className="px-0 md:px-10 sxl:px-20 mt-2 sm:mt-5 placeholder:text-dark sm:py-4 flex items-start flex-wrap font-medium mx-5 md:mx-10">
          {categories.map(cat => (
             <Category
                key={cat}

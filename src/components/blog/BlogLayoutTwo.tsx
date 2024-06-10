@@ -7,8 +7,8 @@ import { format } from 'date-fns';
 
 const BlogLayoutTwo: React.FC<{ blog: Blog }> = ({ blog }) => {
    return (
-      <div className="group grid grid-cols-12 gap-4 items-center border border-salo-violet rounded-xl">
-         <Link href={blog.url} className="col-span-12 lg:col-span-4 h-full rounded-xl overflow-hidden">
+      <div className="group grid grid-cols-12 sm:gap-4 items-center border border-salo-violet rounded-xl">
+         <Link href={blog.url} className="col-span-12 lg:col-span-4 h-full rounded-t-xl sm:rounded-xl overflow-hidden">
             <Image
                src={blog.image?.filePath.replace('../public', '') ?? ''}
                placeholder="blur"
@@ -19,7 +19,7 @@ const BlogLayoutTwo: React.FC<{ blog: Blog }> = ({ blog }) => {
                className="aspect-square w-full h-full object-cover object-center group-hover:scale-105 transition-all ease duration-300"
             />
          </Link>
-         <div className="col-span-12 lg:col-span-8 w-full">
+         <div className="col-span-12 lg:col-span-8 w-full p-4 sm:p-0">
             <span className="inline-block w-full uppercase text-accent font-semibold text-xs sm:text-sm">
                {blog.tags?.[0]}
             </span>
@@ -30,7 +30,7 @@ const BlogLayoutTwo: React.FC<{ blog: Blog }> = ({ blog }) => {
                   </span>
                </h2>
             </Link>
-            <span className="inline-block w-full capitalize text-light/50 font-semibold tex-xs sm:text-base">
+            <span className="inline-block w-full capitalize text-light/50 font-semibold text-sm sm:text-base">
                {format(new Date(blog.publishedAt), 'MMMM dd yyyy')}
             </span>
          </div>
