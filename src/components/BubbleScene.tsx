@@ -23,7 +23,7 @@ const BubbleScene = () => {
       };
    }, []);
 
-   return <div className="w-full h-[100vh] absolute z-0" ref={containerRef} />;
+   return <div className="w-full h-[100vh] absolute z-0 bg-black" ref={containerRef} />;
 };
 
 export default BubbleScene;

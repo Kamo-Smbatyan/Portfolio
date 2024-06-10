@@ -45,6 +45,11 @@ export default function Sidebar({ nav, handleNav }: SidebarProps) {
                         <span className="hover:border-b">Contact</span>
                      </li>
                   </Link>
+                  <Link href="/blog-home">
+                     <li onClick={() => handleNav(false)} className="py-4 text-sm">
+                        <span className="hover:border-b">Blog</span>
+                     </li>
+                  </Link>
                </ul>
                <div className="pt-40">
                   <p className="uppercase tracking-widest">Let&apos;s Connect</p>
