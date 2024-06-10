@@ -20,7 +20,7 @@ const Main = () => {
 
    return (
       <div id="home" className="w-full h-screen text-center relative bg-[#ecf0f3] overflow-hidden">
-         <div className="w-full h-full text-white mx-auto p-2 mt-[30vh] flex justify-center absolute z-10">
+         <div className="w-full h-full text-white mx-auto p-2 items-center flex justify-center absolute z-10">
             <div className="w-full">
                <h1 className="py-4">Xander Carruth</h1>
                <h4 className="px-4 md:px-1/5">
