@@ -17,7 +17,6 @@ const BlogLayoutOne: React.FC<{ blog: Blog }> = ({ blog }) => {
             width={blog.image?.width}
             height={blog.image?.height}
             className="w-full h-full object-center object-cover rounded-xl z-0 group-hover:scale-105 transition-all ease duration-300"
-            sizes="(max-width: 1180px) 100vw, 50vw"
          />
 
          <div className="w-full absolute bottom-0 p-4 xs:p-6 sm:p-10 z-20">
