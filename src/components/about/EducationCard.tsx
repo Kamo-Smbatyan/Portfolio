@@ -27,7 +27,7 @@ const EducationCard: React.FC<EducationCardProps> = ({ index, card, selectedEdCa
          </div>
          <div
             className={`w-full text-left text-sm md:text-md pt-2 px-4 md:px-8 tracking-normal transition-all duration-500 ease-in-out overflow-hidden ${selectedEdCard === index ? 'max-h-screen' : 'max-h-0'}`}>
-            <p className="text-xs md:text-base">{card.description}</p>
+            <p className="text-sm md:text-base">{card.description}</p>
          </div>
       </div>
    );
