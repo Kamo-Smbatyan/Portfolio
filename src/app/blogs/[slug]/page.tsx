@@ -92,7 +92,7 @@ export default function BlogPage({ params }: { params: { slug: string } }) {
                      {blog?.title}
                   </h1>
                </div>
-               <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/60" />
+               <div className="absolute top-0 left-0 right-0 bottom-0 h-full bg-dark/30" />
                <Image
                   src={blog?.image?.filePath.replace('../public', '') ?? ''}
                   placeholder="blur"

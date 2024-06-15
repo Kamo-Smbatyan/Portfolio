@@ -16,7 +16,8 @@ const BlogLayoutThree: React.FC<{ blog: Blog }> = ({ blog }) => {
                alt={blog.title}
                width={blog.image?.width}
                height={blog.image?.height}
-               className="aspect-[4/3] w-full h-full object-cover object-center group-hover:scale-105 transition-all ease duration-300"
+               layout="responsive"
+               className="aspect-[4/3] w-full h-full object-center group-hover:scale-105 transition-all ease duration-300"
             />
          </Link>
          <div className="flex flex-col w-full p-4">
