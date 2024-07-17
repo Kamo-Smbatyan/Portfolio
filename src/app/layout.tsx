@@ -2,6 +2,7 @@ import { cx } from '@src/utils';
 import './globals.css';
 import { Inter, Roboto } from 'next/font/google';
 import Navbar from '@src/components/Navbar';
+import Sidebar from '@src/components/Sidebar';
 // eslint-disable-next-line @typescript-eslint/no-var-requires, import/extensions
 const siteMetadata = require('../utils/siteMetaData.ts');
 

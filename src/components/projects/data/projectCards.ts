@@ -1,9 +1,9 @@
 import { StaticImageData } from 'next/image';
-import OliProject from '@public/assets/project_pics/oli_project.png';
+import bonappetourProject from '@public/assets/project_pics/bonappetour_project.png';
 import PortfolioProject from '@public/assets/project_pics/portfolio_project.png';
-import SalonnIosProject from '@public/assets/project_pics/salonnios_project.png';
-import SalonnVrProject from '@public/assets/project_pics/salonnvr_project.png';
-import SocialProject from '@public/assets/project_pics/social_project.png';
+import ShipBob from '@public/assets/project_pics/shipbob.png';
+
+import URentMe from '@public/assets/project_pics/urentme_project.png';
 
 type ProjectCardInfo = {
    title: string;
@@ -13,37 +13,29 @@ type ProjectCardInfo = {
    link: string;
 };
 
-const salonnMobileCard: ProjectCardInfo = {
-   title: 'Salonn iOS',
-   skills: ['Swift', 'XCode', 'PostgreSQL', 'Express.js', 'Node.js', 'Firestore', 'AWS', 'Redis', 'TypeScript'],
-   image: SalonnIosProject,
+const shipbobCard: ProjectCardInfo = {
+   title: 'ShipBob',
+   skills: ['PHP','Laravel','React','MongoDB','MySql','PostgreSql'],
+   image: ShipBob,
    description:
-      'Salonn iOS is an app which allows users to explore their interests in Art, Technology, and Philosophy.',
-   link: 'https://www.salonn.info/',
+      'ShipBob is a global ecommerce fulfillment service offering warehousing, packing, shipping, tracking, and returns management.',
+   link: 'https://www.shipbob.com/',
 };
-const salonnVrCard: ProjectCardInfo = {
-   title: 'Salonn VR',
-   skills: ['Unity', 'Photon', 'AWS'],
-   image: SalonnVrProject,
-   description:
-      'Salonn VR is a VR app which interfaces with Salonn iOS to allow users to experience physical presence with other users in a VR environment.',
-   link: 'https://www.salonn.info/',
-};
-const oliCard: ProjectCardInfo = {
-   title: 'Open Learning Initiative Student Development Analysis',
+const bonappetourProjectCard: ProjectCardInfo = {
+   title: 'Authentic Food Experiences',
    skills: ['Python', 'Machine Learning'],
-   image: OliProject,
+   image: bonappetourProject,
    description:
-      'In this project, I analyzed data from the OLI textbook to identify important trends for further development of our adaptive textbook.',
-   link: 'https://github.com/xander-carruth/OLI-Data-Analysis',
+      'Community marketplace that connects travelers with local home chefs for a unique home-dining experience, anywhere around the world.',
+   link: 'https://www.bonappetour.com/',
 };
-const socialCard: ProjectCardInfo = {
-   title: 'Facebook User-Connection Probability Detection Based On Social Circles',
-   skills: ['Python', 'Machine Learning'],
-   image: SocialProject,
+const urentmeCard: ProjectCardInfo = {
+   title: 'U rent Me',
+   skills: ['Agile', 'Scrum', 'React','Node','axios'],
+   image: URentMe,
    description:
-      'In this project, I created a novel method of predicting connections between users in the Facebook social network by using the Dunbar model of a social network.',
-   link: '/assets/downloads/CSC522_Final_Report.pdf',
+      'The project is an online rental system that provides boat, off load vehicle rental services all over the United States.',
+   link: 'https://urentme-56412.web.app/',
 };
 const portfolioCard: ProjectCardInfo = {
    title: 'My Portfolio',
@@ -53,7 +45,7 @@ const portfolioCard: ProjectCardInfo = {
    link: 'https://github.com/xander-carruth/x-carruth-portfolio',
 };
 
-const projectCards: ProjectCardInfo[] = [salonnMobileCard, salonnVrCard, oliCard, socialCard, portfolioCard];
+const projectCards: ProjectCardInfo[] = [shipbobCard, bonappetourProjectCard, urentmeCard, portfolioCard];
 
 export default projectCards;
 export { type ProjectCardInfo };

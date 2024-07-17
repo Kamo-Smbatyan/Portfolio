@@ -9,7 +9,7 @@ type SidebarProps = {
 
 export default function Sidebar({ nav, handleNav }: SidebarProps) {
    const mto = 'mailto:';
-   const em = 'acarruth2018@gmail.com';
+   const em = 'octorcat@gmail.com';
 
    return (
       <div className={nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''}>

@@ -8,7 +8,7 @@ import { EmailJSResponseStatus } from 'emailjs-com';
 
 const Contact = () => {
    const mto = 'mailto:';
-   const em = 'acarruth2018@gmail.com';
+   const em = 'octorcat@gmail.com';
    const form = useRef<HTMLFormElement>(null);
 
    const [status, setStatus] = useState<string>('');
@@ -123,13 +123,9 @@ const Contact = () => {
                   </div>
                </div>
                <div className="col-span-4 lg:col-span-3 flex lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4 justify-evenly lg:justify-between items-center lg:my-20 lg:ml-0 lg:mr-0">
+                  
                   <div className="rounded-full w-13 h-13 sm:w-20 sm:h-20 flex items-center justify-center bg-black shadow-lg text-white shadow-salo-blue p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                     <a href="https://www.linkedin.com/in/xander-carruth/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedinIn className="w-7 h-7 sm:w-8 sm:h-8" />
-                     </a>
-                  </div>
-                  <div className="rounded-full w-13 h-13 sm:w-20 sm:h-20 flex items-center justify-center bg-black shadow-lg text-white shadow-salo-blue p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                     <a href="https://github.com/xander-carruth" target="_blank" rel="noopener noreferrer">
+                     <a href="https://github.com/Kamo-Smbatyan" target="_blank" rel="noopener noreferrer">
                         <FaGithub className="w-7 h-7 sm:w-8 sm:h-8" />
                      </a>
                   </div>

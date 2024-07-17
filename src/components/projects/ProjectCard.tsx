@@ -17,7 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ index, card }) => {
             </p>
             <div className="flex flex-wrap justify-center">
                {card.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="m-1 px-2 py-1 text-xxs md:text-sm bg-salo-blue rounded-lg">
+                  <div key={skillIndex} className="m-1 px-2 py-1 text-xxs md:text-sm bg-salo-blue rounded-lg text-black">
                      {skill}{' '}
                   </div>
                ))}{' '}
