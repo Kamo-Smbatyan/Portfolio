@@ -2,7 +2,7 @@ import { StaticImageData } from 'next/image';
 import bonappetourProject from '@public/assets/project_pics/bonappetour_project.png';
 import PortfolioProject from '@public/assets/project_pics/portfolio_project.png';
 import ShipBob from '@public/assets/project_pics/shipbob.png';
-
+import OmniX from '@public/assets/project_pics/omnix_project.png';
 import URentMe from '@public/assets/project_pics/urentme_project.png';
 
 type ProjectCardInfo = {
@@ -23,7 +23,7 @@ const shipbobCard: ProjectCardInfo = {
 };
 const bonappetourProjectCard: ProjectCardInfo = {
    title: 'Authentic Food Experiences',
-   skills: ['Python', 'Machine Learning'],
+   skills: [],
    image: bonappetourProject,
    description:
       'Community marketplace that connects travelers with local home chefs for a unique home-dining experience, anywhere around the world.',
@@ -45,7 +45,15 @@ const portfolioCard: ProjectCardInfo = {
    link: 'https://github.com/xander-carruth/x-carruth-portfolio',
 };
 
-const projectCards: ProjectCardInfo[] = [shipbobCard, bonappetourProjectCard, urentmeCard, portfolioCard];
+const OmniXCard: ProjectCardInfo = {
+   title: 'Omni X',
+   skills: ['Web3', 'React.js', 'Tailwind CSS', 'Next.js', 'TypeScript', 'HTML', 'CSS'],
+   image: OmniX,
+   description: "One of the most rewarding ventures I've undertaken as a web developer was creating a cutting-edge cross-chain NFT marketplace." ,
+   link: 'https://omni-x.io/',
+};
+
+const projectCards: ProjectCardInfo[] = [shipbobCard, bonappetourProjectCard, urentmeCard, portfolioCard, OmniXCard];
 
 export default projectCards;
 export { type ProjectCardInfo };
