@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://xcarruth.vercel.app/
+Host: https://KamoSmbatyan.vercel.app/
 
 # Sitemaps
-Sitemap: https://xcarruth.vercel.app/sitemap.xml
+Sitemap: https://KamoSmbatyan.vercel.app/sitemap.xml
