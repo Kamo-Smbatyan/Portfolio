@@ -4,7 +4,7 @@ import PortfolioProject from '@public/assets/project_pics/portfolio_project.png'
 import ShipBob from '@public/assets/project_pics/shipbob.png';
 import OmniX from '@public/assets/project_pics/omnix_project.png';
 import URentMe from '@public/assets/project_pics/urentme_project.png';
-import CasinoGame from '@public/assets/project_pics/CasinoGame.png';
+import CasinoGame from '@public/assets/project_pics/casino_project.png';
 
 type ProjectCardInfo = {
    title: string;
