@@ -4,6 +4,7 @@ import PortfolioProject from '@public/assets/project_pics/portfolio_project.png'
 import ShipBob from '@public/assets/project_pics/shipbob.png';
 import OmniX from '@public/assets/project_pics/omnix_project.png';
 import URentMe from '@public/assets/project_pics/urentme_project.png';
+import CasinoGame from '@public/assets/project_pics/CasinoGame.png';
 
 type ProjectCardInfo = {
    title: string;
@@ -53,7 +54,15 @@ const OmniXCard: ProjectCardInfo = {
    link: 'https://omni-x.io/',
 };
 
-const projectCards: ProjectCardInfo[] = [shipbobCard, bonappetourProjectCard, urentmeCard, portfolioCard, OmniXCard];
+const CasinoGameCard: ProjectCardInfo = {
+   title: 'KaniCasino',
+   skills: ['Web3', 'React', 'Tailwind CSS', 'Node.js', 'TypeScript', 'HTML', 'Rust'],
+   image: CasinoGame,
+   description: "Users can play games like coin flip, crash, slots games" ,
+   link: 'https://github.com/Kamo-Smbatyan/casino-game',
+};
+
+const projectCards: ProjectCardInfo[] = [shipbobCard, bonappetourProjectCard, urentmeCard, portfolioCard, OmniXCard, CasinoGameCard];
 
 export default projectCards;
 export { type ProjectCardInfo };
